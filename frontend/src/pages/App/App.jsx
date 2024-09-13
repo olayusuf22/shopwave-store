@@ -8,6 +8,7 @@ import PostListPage from '../PostListPage/PostListPage';
 import NewPostPage from '../NewPostPage/NewPostPage';
 import SignUpPage from '../SignUpPage/SignUpPage';
 import LogInPage from '../LogInPage/LogInPage';
+import Cart from '../../components/Cart/Cart';  // Importing the Cart component
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/posts" element={<PostListPage />} />
             <Route path="/posts/new" element={<NewPostPage />} />
+            <Route path="/cart" element={<Cart />} />  {/* Cart Route for logged-in users */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         ) : (
@@ -28,6 +30,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LogInPage setUser={setUser} />} />
             <Route path="/signup" element={<SignUpPage setUser={setUser} />} />
+            <Route path="/cart" element={<Cart />} />  {/* Cart Route for guests */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         )}
