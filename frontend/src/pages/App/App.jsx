@@ -9,6 +9,8 @@ import NewPostPage from '../NewPostPage/NewPostPage';
 import SignUpPage from '../SignUpPage/SignUpPage';
 import LogInPage from '../LogInPage/LogInPage';
 import Cart from '../../components/Cart/Cart';  // Importing the Cart component
+import ProductsList from '../../components/ProductsList/ProductsList';
+import Footer from '../../components/Footer/Footer';
 
 function App() {
   const [user, setUser] = useState(getUser());

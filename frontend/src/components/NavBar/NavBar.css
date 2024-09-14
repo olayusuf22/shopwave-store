@@ -27,7 +27,7 @@
   cursor: pointer;
 }
 .nav_cart_amout{
-  background-color: #ef4444;
+  background-color: #e83232;
   position: absolute;
   right: -8px;
   font-size: 12px;
@@ -49,4 +49,20 @@
   background-color: #f9f9f9;
   box-shadow: -1px 11px 24px -11px rgba( 0, 0, 0, 0.75);
   transition: 0.5s;
+}
+
+.search-form {
+  display: inline-block; /* Aligns form with other nav items */
+  margin-right: 10px; /* Adds some space between the search form and the next link */
+}
+
+.search-form input,
+.search-form button {
+  padding: 5px;
+  margin: 2px;
+}
+
+.NavBar-logo {
+  height: 50px; /* Adjust the height as needed */
+  margin-right: 10px; /* Adds some space between the logo and the next link */
 }
