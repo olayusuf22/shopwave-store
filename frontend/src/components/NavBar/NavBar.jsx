@@ -20,49 +20,47 @@ export default function NavBar({ user, setUser }) {
           <button type="submit">Search</button>
         </form>
         
-        <Link to="/">Home</Link>
-        &nbsp; | &nbsp;
-  
-        {/* Conditional rendering based on user's login status */}
-        {user ? (
-          <>
-            <Link to="/posts">Post List</Link>
-            &nbsp; | &nbsp;
-            <Link to="/posts/new">New Post</Link>
-            &nbsp; | &nbsp;
-            <Link to="" onClick={handleLogOut}>Log Out</Link>
-            &nbsp;&nbsp;
-            <span>Welcome, {user.name}</span>
-          </>
-        ) : (
-          <>
-            <Link to="/login">Log In</Link>
-            &nbsp; | &nbsp;
-            <Link to="/signup">Sign Up</Link>
-            &nbsp; | &nbsp;
-            <Link to="/cart">Cart</Link>
-          </>
-        )}
+        <ul className="nav-links">
+          <li><Link to="/">Home</Link></li>
+          {user ? (
+            <>
+              <li><Link to="/posts">Post List</Link></li>
+              <li><Link to="/posts/new">New Post</Link></li>
+              <li><Link to="/" onClick={handleLogOut}>Log Out</Link></li>
+              <li>Welcome, {user.name}</li>
+            </>
+          ) : (
+            <>
+              <li><Link to="/login">Log In</Link></li>
+              <li><Link to="/signup">Sign Up</Link></li>
+              <li><Link to="/cart">Cart</Link></li>
+            </>
+          )}
+        </ul>
       </nav>
   
       {/* Main Content */}
       <main>
         <section className="category-display">
           <h2>Featured Categories</h2>
-          <div className="categories">
-            <Link to="/men">Men's Clothing</Link>
-            <Link to="/women">Women's Clothing</Link>
-            <Link to="/kids">Kids' Clothing</Link>
-          </div>
+          <ul className="categories">
+            <li><Link to="/men">Men's Clothing</Link></li>
+            <li><Link to="/women">Women's Clothing</Link></li>
+            <li><Link to="/kids">Kids' Clothing</Link></li>
+            <li><Link to="/accessories">Accessories</Link></li>
+            <li><Link to="/shoes">Shoes</Link></li>
+            <li><Link to="/sale">Sale</Link></li>
+          </ul>
         </section>
       </main>
   
       {/* Footer */}
       <footer>
-        <p>Ola© 2024 ShopWave Store. All rights reserved.</p>
-        <Link to="/about">About Us</Link>
-        &nbsp; | &nbsp;
-        <Link to="/contact">Contact Us</Link>
+        <ul className="footer-links">
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/contact">Contact Us</Link></li>
+        </ul>
+        <p>Ola©2024 ShopWave Store. All rights reserved.</p>
       </footer>
     </div>
   );
