@@ -14,6 +14,7 @@ export default function NavBar({ user, setUser }) {
       {/* Navigation Bar */}
       <nav className="NavBar">
         <img src={logo} alt="Logo" className="NavBar-logo" />
+
         
         <form className="search-form">
           <input type="text" placeholder="Search..." />
@@ -43,6 +44,7 @@ export default function NavBar({ user, setUser }) {
       <main>
         <section className="category-display">
           <h2>Featured Categories</h2>
+
           <ul className="categories">
             <li><Link to="/men">Men's Clothing</Link></li>
             <li><Link to="/women">Women's Clothing</Link></li>

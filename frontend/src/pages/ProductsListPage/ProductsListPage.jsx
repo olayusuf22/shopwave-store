@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const ProductsList = () => {
+const ProductsListPage = () => {
   return (
     <div className="products-container">
       {productsData.map(product => (
@@ -18,4 +18,4 @@ const ProductsList = () => {
   );
 };
 
-export default ProductsList;
+export default ProductsListPage;

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import * as authService from '../../services/authService';
+import { useNavigate } from 'react-router-dom';
 
 export default function LogInPage({ setUser }) {
   const [formData, setFormData] = useState({
@@ -7,12 +8,14 @@ export default function LogInPage({ setUser }) {
     password: '',
   });
   const [errorMsg, setErrorMsg] = useState('');
+  const navigate = useNavigate();
 
   async function handleSubmit(evt) {
     evt.preventDefault();
     try {
       const user = await authService.logIn(formData);
       setUser(user);
+      navigate('/products');
     } catch (err) {
       // An error occurred
       setErrorMsg('Log In Failed - Try Again');

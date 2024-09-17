@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom'
 import { productsData } from '../../data'
 
 //import Context
-import { ShopContext } from '../../Components/ShopContext/ShopContext'
+import { ShopContext } from '../ShopContext/ShopContext'
 
 const ProductDetails = () => {
 

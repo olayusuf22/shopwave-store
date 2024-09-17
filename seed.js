@@ -1,156 +1,174 @@
-import cloth1 from './assets/ml2.jpg'
-import cloth2 from './assets/topm1.jpg'
-import cloth3 from './assets/ld1.jpg'
-import cloth4 from './assets/ml1.jpg'
-import cloth5 from './assets/tr1.jpg'
-import cloth6 from './assets/ld3.jpg'
-import cloth7 from './assets/gown2.jpg'
-import cloth8 from './assets/topm2.jpg'
-import cloth9 from './assets/ml3.jpg'
-import cloth10 from './assets/topm3.jpg'
-import cloth11 from './assets/gown3.jpg'
-import cloth12 from './assets/tr3.jpg'
-import cloth13 from './assets/gown4.jpg'
-import cloth14 from './assets/tr2.jpg'
-import cloth15 from './assets/ld4.jpg'
-import cloth16 from './assets/ld5.jpg'
-import cloth17 from './assets/ld6.jpg'
+// Usage: node seed.js
+(async () => {
 
-
-export const productsData = [
+ const productData = [
     {
-        id : 1,
-        image : cloth1,
-        title : ' Elegant Long Evening Gown',
-        price: $130,
+        image : '/images/ml2.jpg',
+        name : ' Elegant Long Evening Gown',
+        price: 10,
+        currency: 'USD',
+        stock: 10,
+        tags: ['ladies', 'evening gown'],
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 2,
-        image : cloth2,
-        title : ' Elegant Long Evening Gown',
-        price: $130,
+        image : '/images/topm1.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 120,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 3,
-        image : cloth3,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/ld1.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        stock: 10,
+        price: 150,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 4,
-        image : cloth4,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+       
+        image : '/images/ml1.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 10,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 5,
-        image : cloth5,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/tr1.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 13,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 6,
-        image : cloth6,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/ld3.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 160,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 7,
-        image : cloth7,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/gown2.jpg',
+        name : ' Elegant Long Evening Gown',
+        price: 10,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 8,
-        image : cloth8,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/topm2.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 100,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 9,
-        image : cloth9,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/ml3.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 60,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 10,
-        image : cloth10,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/topm3.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 70,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 11,
-        image : cloth11,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/gown3.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 90,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 12,
-        image : cloth12,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/tr3.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 40,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 13,
-        image : cloth13,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/gown4.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 30,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 14,
-        image : cloth14,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/tr2.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 140,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 15,
-        image : cloth15,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/ld4.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 150,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 16,
-        image : cloth16,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/ld5.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 120,
+        stock: 10,
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
-        id : 17,
-        image : cloth17,
-        title : ' Elegant Long Evening Gown',
-        price: 130,
+        image : '/images/ld6.jpg',
+        name : ' Elegant Long Evening Gown',
+        tags: ['ladies', 'evening gown'],
+        price: 90,
+        stock: 10,   
+        currency: 'USD',
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
@@ -165,10 +183,11 @@ const mongoose = require("mongoose");
       console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
     });
 
-    const Product = require('./models/product'); // Ensure you have a corresponding Mongoose model
+    const Product = require('./backend/models/product'); // Ensure you have a corresponding Mongoose model
     await Product.deleteMany({}); // Clears existing products
     const products = await Product.create(productData); // Insert new products
     console.log(products);
     process.exit();
 (async () => {
   })().catch(err => console.error(err));
+})();
