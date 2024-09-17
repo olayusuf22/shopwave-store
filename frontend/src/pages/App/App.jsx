@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../services/authService';
+import { GiShoppingCart } from "react-icons/gi";
 import './App.css';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
@@ -8,7 +9,7 @@ import PostListPage from '../PostListPage/PostListPage';
 import NewPostPage from '../NewPostPage/NewPostPage';
 import SignUpPage from '../SignUpPage/SignUpPage';
 import LogInPage from '../LogInPage/LogInPage';
-import Cart from '../../components/Cart/Cart'; 
+import Cart from '../../components/Cart/Cart';
 import ProductsList from '../../components/ProductsList/ProductsList';
 import Footer from '../../components/Footer/Footer';
 
@@ -22,9 +23,10 @@ function App() {
         {user ? (
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LogInPage setUser={setUser} />} />
             <Route path="/posts" element={<PostListPage />} />
             <Route path="/posts/new" element={<NewPostPage />} />
-            <Route path="/cart" element={<Cart />} />  {/* Cart Route for logged-in users */}
+            <Route path="/cart" element={<GiShoppingCart />} />  {/* Cart Route for logged-in users */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         ) : (
@@ -32,7 +34,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LogInPage setUser={setUser} />} />
             <Route path="/signup" element={<SignUpPage setUser={setUser} />} />
-            <Route path="/cart" element={<Cart />} />  {/* Cart Route for guests */}
+            <Route path="/cart" element={<GiShoppingCart />} />  {/* Cart Route for guests */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         )}
