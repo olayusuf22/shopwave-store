@@ -31,7 +31,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LogInPage setUser={setUser} />} />
-            <Route path="/products" element={<ProductsListPage />} />
+            <Route path="/products" element={<ProductsListPage products={products} />} />
             <Route path="/cart" element={<GiShoppingCart />} />  {/* Cart Route for logged-in users */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

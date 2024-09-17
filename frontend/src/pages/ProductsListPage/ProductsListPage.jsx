@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-const ProductsListPage = () => {
+const ProductsListPage = ({products}) => {
   return (
     <div className="products-container">
-      {productsData.map(product => (
+      {products.map(product => (
         <div key={product.id} className="product-card">
           <img src={product.image} alt={product.title} />
           <h3>{product.title}</h3>
