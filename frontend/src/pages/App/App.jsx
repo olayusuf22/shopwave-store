@@ -10,12 +10,16 @@ import LogInPage from '../LogInPage/LogInPage';
 import Cart from '../../components/Cart/Cart';
 import ProductsListPage from '../ProductsListPage/ProductsListPage';
 import * as productsService from '../../services/productService';
+import * as ordersService from '../../services/orderService';
+
 
 
 
 function App() {
   const [user, setUser] = useState(getUser());
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState(null);
+
   useEffect(() => {
     async function getProducts() {
       const products = await productsService.getAll();
@@ -23,6 +27,18 @@ function App() {
     }
     getProducts();
   }, [])
+
+  useEffect(() => {
+    async function getCart() {
+      const cart = await ordersService.getCart();
+      setCart(cart);
+    }
+    if (user) {
+      getCart();
+    } else {
+      setCart(null);
+    }
+  }, [user])
 
   return (
     <main id="react-app">
