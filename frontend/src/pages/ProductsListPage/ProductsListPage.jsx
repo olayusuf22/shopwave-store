@@ -1,4 +1,4 @@
-import * as orderService from '../../services/orderServices';
+import * as orderService from '../../services/orderService';
 
 
 const ProductsListPage = ({products, setCart}) => {

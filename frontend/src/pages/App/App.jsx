@@ -9,7 +9,7 @@ import LogInPage from '../LogInPage/LogInPage';
 import CartPage from '../CartPage/CartPage';
 import ProductsListPage from '../ProductsListPage/ProductsListPage';
 import * as productsService from '../../services/productService';
-import * as ordersService from '../../services/orderServices';
+import * as ordersService from '../../services/orderService';
 
 
 
