@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, Navigate, Link } from 'react-router-dom';
 import { getUser } from '../../services/authService';
-import { GiShoppingCart } from "react-icons/gi";
-import './App.css';
+import './App.css'; 
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import SignUpPage from '../SignUpPage/SignUpPage';
@@ -10,7 +9,7 @@ import LogInPage from '../LogInPage/LogInPage';
 import CartPage from '../CartPage/CartPage';
 import ProductsListPage from '../ProductsListPage/ProductsListPage';
 import * as productsService from '../../services/productService';
-import * as ordersService from '../../services/orderService';
+import * as ordersService from '../../services/orderServices';
 
 
 
