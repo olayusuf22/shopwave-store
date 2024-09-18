@@ -17,4 +17,7 @@ router.use(async function(req, res, next) {
 // GET /api/orders/cart
 router.get('/cart', ordersCtrl.getCart);
 
+// PUT /api/orders/cart/products/:id
+router.put('/cart/products/:productId', ordersCtrl.addToCart);
+
 module.exports = router;
