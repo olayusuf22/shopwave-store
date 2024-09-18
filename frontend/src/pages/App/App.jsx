@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, Link } from 'react-router-dom';
 import { getUser } from '../../services/authService';
 import { GiShoppingCart } from "react-icons/gi";
 import './App.css';
@@ -10,6 +10,7 @@ import LogInPage from '../LogInPage/LogInPage';
 import Cart from '../../components/Cart/Cart';
 import ProductsListPage from '../ProductsListPage/ProductsListPage';
 import * as productsService from '../../services/productService';
+
 
 
 function App() {
@@ -45,6 +46,13 @@ function App() {
           </Routes>
         )}
       </section>
+      <footer>
+        <ul className="footer-links">
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/contact">Contact Us</Link></li>
+        </ul>
+        <p>Ola©2024 ShopWave Store. All rights reserved.</p>
+      </footer>
     </main>
   );
 }

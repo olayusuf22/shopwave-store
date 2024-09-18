@@ -13,19 +13,13 @@ body {
   min-height: 100vh;
 }
 
-/* Wrapper for content and footer */
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
 /* Navigation Bar */
 .NavBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #101010;
+  background-color: #0c41e2;
   padding: 10px 20px;
   color: white;
 }
@@ -54,6 +48,7 @@ body {
 
 .search-form {
   display: flex;
+  size-adjust: 10px;
 }
 
 .search-form input {
@@ -63,7 +58,7 @@ body {
 
 .search-form button {
   padding: 6px 10px;
-  background-color: #1034ea;
+  background-color: #131314;
   color: white;
   border: none;
   cursor: pointer;

@@ -39,13 +39,7 @@ export default function NavBar({ user, setUser }) {
       </nav>
 
       {/* Footer */}
-      <footer>
-        <ul className="footer-links">
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-        </ul>
-        <p>Ola©2024 ShopWave Store. All rights reserved.</p>
-      </footer>
+      
     </div>
   );
 }
