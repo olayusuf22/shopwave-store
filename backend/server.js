@@ -29,6 +29,7 @@ app.use(require('./middleware/checkToken'));
 app.use('/api/auth', require('./routes/auth'));
 const ensureLoggedIn = require('./middleware/ensureLoggedIn');
 app.use('/api/products', require('./routes/products'));
+app.use('/api/orders', ensureLoggedIn, require('./routes/orders'));
 // Remember to use ensureLoggedIn middleware when mounting
 // routes and/or within the route modules to protect routes
 // that require a logged in user either
