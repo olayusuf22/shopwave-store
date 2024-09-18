@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import * as authService from '../../services/authService';
 import './NavBar.css';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/Logo.png';
 
 export default function NavBar({ user, setUser }) {
   function handleLogOut() {
