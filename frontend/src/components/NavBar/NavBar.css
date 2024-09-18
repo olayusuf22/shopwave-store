@@ -25,7 +25,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #101010;
   padding: 10px 20px;
   color: white;
 }
@@ -63,7 +63,7 @@ body {
 
 .search-form button {
   padding: 6px 10px;
-  background-color: #000;
+  background-color: #1034ea;
   color: white;
   border: none;
   cursor: pointer;
@@ -71,7 +71,7 @@ body {
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #0d0d0d;
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -92,4 +92,17 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Adjust this as per your layout */
+  padding: 10px;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
 }
