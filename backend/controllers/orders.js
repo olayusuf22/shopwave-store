@@ -5,14 +5,8 @@ module.exports = {
   getCart,
 };
 
-// READ: Return all products
+// READ: Return the cart for the current user
 async function getCart(req, res) {
-  try {
-    const products = await Product.find({});
-    res.json (products);
-  } catch (err) {
-    console.log(err)
-    res.status(500).json(err);
-  }
+  res.json(req.cart);
 }
 
