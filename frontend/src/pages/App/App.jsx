@@ -7,10 +7,11 @@ import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import SignUpPage from '../SignUpPage/SignUpPage';
 import LogInPage from '../LogInPage/LogInPage';
-import Cart from '../../components/Cart/Cart';
+import CartPage from '../CartPage/CartPage';
 import ProductsListPage from '../ProductsListPage/ProductsListPage';
 import * as productsService from '../../services/productService';
 import * as ordersService from '../../services/orderService';
+
 
 
 
@@ -48,8 +49,9 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LogInPage setUser={setUser} />} />
-            <Route path="/products" element={<ProductsListPage products={products} />} />
-            <Route path="/cart" element={<GiShoppingCart />} />  {/* Cart Route for logged-in users */}
+            <Route path="/products" element={<ProductsListPage setCart={setCart} products={products} />} />
+            
+            <Route path="/cart" element={<CartPage cart={cart} />} />  {/* Cart Route for logged-in users */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         ) : (
@@ -57,7 +59,6 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LogInPage setUser={setUser} />} />
             <Route path="/signup" element={<SignUpPage setUser={setUser} />} />
-            <Route path="/cart" element={<GiShoppingCart />} />  {/* Cart Route for guests */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         )}

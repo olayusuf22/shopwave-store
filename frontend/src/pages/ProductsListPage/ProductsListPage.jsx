@@ -1,11 +1,10 @@
-import * as orderService from '../../services/orderService';
+import * as orderService from '../../services/orderservice';
 
 
-const ProductsListPage = ({products}) => {
+const ProductsListPage = ({products, setCart}) => {
   async function handleAddToCart(productId) {
     const updatedCart = await orderService.addToCart(productId);
-    console.log(updatedCart);
-
+    setCart(updatedCart);
   }
   return (
     <div className="products-container">
