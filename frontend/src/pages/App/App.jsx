@@ -40,6 +40,11 @@ function App() {
     }
   }, [user])
 
+  async function handleRemoveProduct(productId) {
+    const updatedCart = await ordersService.removeFromCart(productId);
+    setCart(updatedCart);
+  }
+
   return (
     <main id="react-app">
       <NavBar user={user} setUser={setUser} />
@@ -50,7 +55,7 @@ function App() {
             <Route path="/login" element={<LogInPage setUser={setUser} />} />
             <Route path="/products" element={<ProductsListPage setCart={setCart} products={products} />} />
             
-            <Route path="/cart" element={<CartPage cart={cart} />} />  {/* Cart Route for logged-in users */}
+            <Route path="/cart" element={<CartPage handleRemoveProduct={handleRemoveProduct} cart={cart} />} />  {/* Cart Route for logged-in users */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         ) : (

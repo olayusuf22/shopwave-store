@@ -1,6 +1,6 @@
 import "./CartPage.css";
 
-const CartPage = ({cart}) => {
+const CartPage = ({cart, handleRemoveProduct}) => {
   if (!cart) return <p>Loading...</p>;
 
   if (cart.products.length > 0) {
@@ -9,7 +9,10 @@ const CartPage = ({cart}) => {
         <h1>Your Cart</h1>
         <ul>
           {cart.products.map(product => (
-            <li key={product._id}>{product.name}</li>
+            <li key={product._id}>
+              {product.name}
+              <button onClick={() => handleRemoveProduct(product._id)} >Remove</button>
+            </li>
           ))}
         </ul>
       </div>

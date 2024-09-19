@@ -9,3 +9,7 @@ export async function getCart() {
 export async function addToCart(productId) {
   return sendRequest(`${BASE_URL}/cart/products/${productId}`, 'PUT');
 }
+
+export async function removeFromCart(productId) {
+  return sendRequest(`${BASE_URL}/cart/products/${productId}`, 'DELETE');
+}

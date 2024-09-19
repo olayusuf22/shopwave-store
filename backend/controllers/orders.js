@@ -5,6 +5,7 @@ const Order = require('../models/order');
 module.exports = {
   getCart,
   addToCart,
+  removeFromCart,
 };
 
 // READ: Return the cart for the current user
@@ -19,3 +20,13 @@ async function addToCart(req, res) {
   await req.cart.save();
   res.json(req.cart);
 }
+
+// DELETE: Remove a product from the cart
+async function removeFromCart(req, res) {
+  console.log("removeFromCart");
+  req.cart.products = req.cart.products.filter(product => !product._id.equals(req.params.productId) );
+  await req.cart.save();
+  res.json(req.cart);
+}
+
+

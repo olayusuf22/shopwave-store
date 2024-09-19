@@ -20,4 +20,7 @@ router.get('/cart', ordersCtrl.getCart);
 // PUT /api/orders/cart/products/:id
 router.put('/cart/products/:productId', ordersCtrl.addToCart);
 
+// DELETE /api/orders/cart/products/:id
+router.delete('/cart/products/:productId', ordersCtrl.removeFromCart);
+
 module.exports = router;
