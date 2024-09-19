@@ -1,5 +1,6 @@
 const path = require('path'); // Built into Node
 const express = require('express');
+const Order = require('./models/order');
 const logger = require('morgan');
 const app = express();
 
@@ -24,6 +25,18 @@ app.use(express.json());
 // verify that it's a valid.  If so, it will assign the
 // user object in the JWT's payload to req.user
 app.use(require('./middleware/checkToken'));
+app.use(async function(req, res, next) {
+  if (!req.user) {
+    req.cart = null;
+    return next();
+  }
+  let cart = await Order.findOne({ user: req.user._id, paid: false });
+  if (!cart) {
+      cart = await Order.create({ user: req.user._id });
+  }
+  req.cart = cart;
+  next();
+});
 
 // API Routes
 app.use('/api/auth', require('./routes/auth'));

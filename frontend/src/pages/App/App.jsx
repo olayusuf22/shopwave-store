@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, Navigate, Link } from 'react-router-dom';
+import { Routes, Route, Navigate, Link, useNavigate } from 'react-router-dom';
 import { getUser } from '../../services/authService';
 import './App.css'; 
 import NavBar from '../../components/NavBar/NavBar';
@@ -19,6 +19,7 @@ function App() {
   const [user, setUser] = useState(getUser());
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function getProducts() {
@@ -41,8 +42,15 @@ function App() {
   }, [user])
 
   async function handleRemoveProduct(productId) {
-    const updatedCart = await ordersService.removeFromCart(productId);
+    const updateCart = await ordersService.removeFromCart(productId);
     setCart(updatedCart);
+  }
+
+  async function handleCheckOut() {
+    await ordersService.checkOut();
+    const cart = await ordersService.getCart();
+    setCart(cart);
+    navigate('/products');
   }
 
   return (
@@ -51,16 +59,16 @@ function App() {
       <section id="main-section">
         {user ? (
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage products={products} />} />
             <Route path="/login" element={<LogInPage setUser={setUser} />} />
             <Route path="/products" element={<ProductsListPage setCart={setCart} products={products} />} />
             
-            <Route path="/cart" element={<CartPage handleRemoveProduct={handleRemoveProduct} cart={cart} />} />  {/* Cart Route for logged-in users */}
+            <Route path="/cart" element={<CartPage handleCheckOut={handleCheckOut} handleRemoveProduct={handleRemoveProduct} cart={cart} />} />  {/* Cart Route for logged-in users */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         ) : (
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage products={products} />} />
             <Route path="/login" element={<LogInPage setUser={setUser} />} />
             <Route path="/signup" element={<SignUpPage setUser={setUser} />} />
             <Route path="*" element={<Navigate to="/" />} />

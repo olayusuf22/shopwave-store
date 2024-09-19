@@ -6,6 +6,7 @@ module.exports = {
   getCart,
   addToCart,
   removeFromCart,
+  checkOut,
 };
 
 // READ: Return the cart for the current user
@@ -29,4 +30,10 @@ async function removeFromCart(req, res) {
   res.json(req.cart);
 }
 
+// UPDATE: Checkout
+async function checkOut(req, res) {
+  req.cart.paid = true;
+  await req.cart.save();
+  res.json(req.cart);
+}
 

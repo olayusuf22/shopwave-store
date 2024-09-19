@@ -1,6 +1,6 @@
 import "./CartPage.css";
 
-const CartPage = ({cart, handleRemoveProduct}) => {
+const CartPage = ({cart, handleRemoveProduct, handleCheckOut}) => {
   if (!cart) return <p>Loading...</p>;
 
   if (cart.products.length > 0) {
@@ -15,6 +15,8 @@ const CartPage = ({cart, handleRemoveProduct}) => {
             </li>
           ))}
         </ul>
+        <p>Total: ${cart.totalPrice.toFixed(2)}</p>
+        <button onClick={handleCheckOut}>Checkout</button>
       </div>
     );
 
