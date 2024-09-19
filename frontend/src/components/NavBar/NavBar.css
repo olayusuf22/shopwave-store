@@ -93,11 +93,11 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px; /* Adjust this as per your layout */
+  height: 100px; 
   padding: 10px;
 }
 
 .product-image {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
 }
