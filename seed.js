@@ -166,11 +166,11 @@
         image : '/images/ld6.jpg',
         name : ' Elegant Long Evening Gown',
         tags: ['ladies', 'evening gown'],
-        price: 90,
+        price: 1000,
         stock: 10,   
         currency: 'USD',
-        category: 'ladies',
-        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
+        category: 'Ladies',
+        description: 'This elegant long evening gown is perfect for formal occasions. Crafted with attention to detail, it offers a sophisticated look that is sure to turn heads. Made from high-quality materials, it ensures comfort and durability. Ideal for ladies who want to make a statement at any evening event.',
     },
     
 ]

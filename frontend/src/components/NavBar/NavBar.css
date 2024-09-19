@@ -19,14 +19,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0a0a0a;
+  background-color: purple;
   padding: 10px 20px;
   color: white;
 }
 
-.NavBar-logo {
-  height: 50px;
-}
 
 .nav-links {
   list-style: none;
@@ -66,7 +63,7 @@ body {
 
 /* Footer */
 footer {
-  background-color: #0d0d0d;
+  background-color: purple;
   color: white;
   text-align: center;
   padding: 20px 0;

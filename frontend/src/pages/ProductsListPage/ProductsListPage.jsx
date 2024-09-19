@@ -1,5 +1,5 @@
 import * as orderService from '../../services/orderService';
-
+import './ProductsListPage.css';
 
 const ProductsListPage = ({products, setCart}) => {
   async function handleAddToCart(productId) {

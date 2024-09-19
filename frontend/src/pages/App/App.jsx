@@ -32,6 +32,7 @@ function App() {
   useEffect(() => {
     async function getCart() {
       const cart = await ordersService.getCart();
+      console.log(cart);
       setCart(cart);
     }
     if (user) {
@@ -49,13 +50,14 @@ function App() {
   async function handleCheckOut() {
     await ordersService.checkOut();
     const cart = await ordersService.getCart();
+    console.log(cart);
     setCart(cart);
     navigate('/products');
   }
 
   return (
     <main id="react-app">
-      <NavBar user={user} setUser={setUser} />
+      <NavBar cart={cart} user={user} setUser={setUser} />
       <section id="main-section">
         {user ? (
           <Routes>

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import * as authService from '../../services/authService';
 import './NavBar.css';
 
-export default function NavBar({ user, setUser }) {
+export default function NavBar({ cart, user, setUser }) {
   function handleLogOut() {
     authService.logOut();
     setUser(null);
@@ -27,7 +27,7 @@ export default function NavBar({ user, setUser }) {
               <li><Link to="/signup">Sign Up</Link></li>
             </>
           )}
-          <li><Link to="/cart">Cart</Link></li>
+          <li><Link to="/cart">Cart {cart?.products?.length || 0}</Link></li>
         </ul>
 
         <form className="search-form">
