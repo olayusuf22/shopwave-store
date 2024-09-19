@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import * as authService from '../../services/authService';
 import './NavBar.css';
-import logo from '../../assets/logo.png';
 
 export default function NavBar({ user, setUser }) {
   function handleLogOut() {
@@ -13,7 +12,6 @@ export default function NavBar({ user, setUser }) {
     <div className="wrapper">
       {/* Navigation Bar */}
       <nav className="NavBar">
-        <img src={logo} alt="Logo" className="NavBar-logo" />
 
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
