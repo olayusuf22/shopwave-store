@@ -1,5 +1,5 @@
-                                                         ShopWave Store
-Project Overview
+                                                        ShopWave Store
+
 ShopWave Store is a comprehensive e-commerce platform designed to facilitate the browsing and purchasing of various products. The platform offers a user-friendly interface for both shoppers and administrators. It incorporates features such as user authentication, dynamic content loading, and responsive design to ensure a seamless shopping experience across all devices.
 
 #Features
